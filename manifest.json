@@ -1,6 +1,6 @@
 {
-  "name": "Beanie Pro",
-  "description": "Beanie Method — Pro edition.",
+  "name": "Ace Finder",
+  "description": "Get on the pace, with Ace Finder. Guarenteed brainrots.",
   "version": "1.0.0",
   "manifest_version": 3,
 
@@ -24,3 +24,4 @@
   "permissions": ["tabs", "scripting", "storage"],
   "host_permissions": ["https://*.roblox.com/*"]
 }
+
