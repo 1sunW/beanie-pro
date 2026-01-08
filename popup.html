@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="libs/toastify.min.css" />
+  <link rel="stylesheet" href="libs/animate.min.css" />
+</head>
+<body>
+
+  <!-- Loading overlay (totals scan) -->
+  <div id="loadingOverlay" class="loading hidden">
+    <div class="loading-box animate__animated animate__fadeIn">
+      <div class="spinner"></div>
+      <div id="loadingText" class="loading-title">Scanning private servers…</div>
+      <div id="liveCount" class="loading-sub">0 scanned</div>
+      <button id="skipScan" class="loading-skip">Skip</button>
+    </div>
+  </div>
+
+  <div class="panel animate__animated animate__fadeIn">
+    <div class="header"><span>Beanie</span> Pro</div>
+
+    <div class="stats">
+  <div>Total servers: <b id="totalServers">—</b></div>
+  <div>Servers with players: <b id="serversWithPlayers">—</b></div>
+  <div>Servers with players (no owner inside): <b id="serversWithPlayersNoOwner">—</b></div>
+  <div id="pageInfo">Page 1 / —</div>
+</div>
+<div class="stats-separator"></div>
+    <div class="controls">
+  <label class="checkrow">
+    <input type="checkbox" id="skipTotals" />
+    <span>Skip totals scan</span>
+  </label>
+
+  <label class="checkrow">
+    <input type="checkbox" id="showOwnerInside" />
+    <span>Show servers with owner inside</span>
+  </label>
+
+  <label class="checkrow">
+    <input type="checkbox" id="onlyOnePlayer" />
+    <span>Only show servers with 1 player</span>
+  </label>
+
+  <label class="checkrow">
+  <input type="checkbox" id="useDeeplink" />
+  <span>Use deeplink (faster join)</span>
+</label>
+</div>
+  
+
+    <div class="buttons">
+      <button id="firstPage">First Page</button>
+      <button id="refreshCurrent">Refresh Page</button>
+      <button id="next">Next Page</button>
+      <button id="scanTotalsAgain">Rescan Stats</button>
+    </div>
+
+    <div id="status" class="status">Idle</div>
+    <div id="servers" class="servers"></div>
+  </div>
+
+  <script src="libs/toastify.min.js"></script>
+  <script src="libs/howler.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
